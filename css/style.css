@@ -1,0 +1,490 @@
+/*  BODY STYLES  -----------------------------------*/
+:root {
+  --color1: #008B8B;
+  --greyText: #3d3d3d;
+  --accentColor: #6b4b3d;
+  --bodyBgColor: #FFEFD5;
+  --bodyFont: 'Playfair Display', serif;
+  --logoFont: 'Alex Brush', cursive;
+}
+
+* {
+//border: 1px solid red;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: var(--bodyFont);
+  color: var(--greyText);
+  scroll-behavior: smooth;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: var(--bodyBgColor);
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+
+p {
+  font-size: 1.5rem;
+}
+
+.section-title {
+  display: block;
+  font-family: var(--bodyFont);
+  font-size: 1.5rem;
+  font-weight: lighter;
+  padding-bottom: 10px;
+}
+
+.button-container {
+  text-align: center;
+}
+
+.full-width {
+  display: block;
+  padding: 5%;
+  background-color: var(--accentColor);
+  color: white;
+  text-align: center;
+}
+  .full-width h1 {
+    font-size: 2.5rem;
+    padding: 0;
+    margin: 0;
+  }
+
+
+button {
+  border: 1px solid white;
+  color: white;
+  background-color: rgba(0,0,0,0);
+  padding: 10px 50px;
+  font-family: var(--bodyFont);
+  font-size: 1.5rem;
+  margin: 20px 0;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+  button:hover, button:active {
+    background-color: white;
+    color: grey;
+  }
+
+
+/*  HEADER STYLES  -----------------------------------*/
+
+header {
+  display: block;
+  background-color: #4d3319; /* Used if the image is unavailable */
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../media/hero.jpg");
+  background-attachment: fixed; /* Parallax effect */
+  padding: 0 5% 0 5%;
+  color: white;
+}
+  .header-top {
+    padding-top: 5%;
+  }
+
+.logo {
+  font-family: var(--logoFont);
+  font-size: 2.5rem;
+  color: white;
+  text-decoration: none;
+}
+
+nav {
+  display: inline-block;
+  float: right;
+  font-size: 1.5rem;
+}
+    @media only screen and (max-width: 700px) {
+      nav {
+        display: none;
+      }
+    }
+
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav li {
+    display: inline-block;
+    padding-right: 10px;
+  }
+
+  nav a, nav a:visited {
+    color: white;
+    text-decoration: none;
+  }
+
+  nav a:hover {
+    font-weight: bold;
+  }
+
+.hero-text {
+  position: absolute;
+  top: 30%;
+}
+
+.hero-h1 {
+  font-family: var(--bodyFont);
+  color: white;
+  font-weight: normal;
+  font-size: 5rem;
+  margin-top: 0;
+}
+  @media only screen and (max-width: 700px) {
+    .hero-h1 {
+      font-size: 4rem;
+    }
+  }
+
+/*  MOBILE NAV  -----------------------------------*/
+#hamburger {
+  display: none;
+  position: fixed;
+  top: 3%;
+  right: 5%;
+  font-size: 3rem;
+  color: white;
+  -webkit-text-stroke: 1px var(--accentColor);
+  z-index: 2;
+}
+  #hamburger:hover {
+    opacity: 0.7;
+  }
+
+  @media only screen and (max-width: 700px) {
+    #hamburger {
+      display: inline-block;
+    }
+  }
+
+#mobile-nav {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom, rgba(188,143,143,1) 80%, rgba(188,143,143,0.2));
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0.99;
+  z-index: 1;
+  animation-duration: 1s;
+  animation-name: slidein;
+}
+  @keyframes slidein {
+    from {
+      margin-top: -100%;
+      height: 0%;
+    }
+
+    to {
+      margin-top: 0%;
+      height: 100%;
+    }
+  }
+
+  #mobile-nav ul {
+    padding-top: 4rem;
+    text-align: center;
+  }
+
+  #mobile-nav li {
+    display: block;
+    padding: 16px 16px;
+    cursor: pointer;
+    margin: 0;
+    font-size: 3rem;
+  }
+    #mobile-nav li:active {
+      font-weight: bold;
+    }
+
+
+/*  ABOUT STYLES  -----------------------------------*/
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10% 5%;
+  align-items: center;
+}
+  .about-col {
+    width: 49%;
+    min-width: 300px;
+    align-items: center;
+  }
+
+  @media only screen and (max-width: 700px) {
+    .about-col {
+      width: 100%;
+      min-width: 0;
+    }
+  }
+
+.about h2 {
+  padding-right: 10px;
+}
+
+
+/*  HERO2 STYLES  -----------------------------------*/
+.hero2 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: #4d3319; /* Used if the image is unavailable */
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../media/hero2.jpg");
+  background-attachment: scroll;
+  padding: 0 5% 0 5%;
+  color: white;
+}
+
+  .hero2 h1 {
+    font-size: 3rem;
+    font-style: italic;
+  }
+    @media only screen and (max-width: 700px) {
+      .hero2-text h1 {
+        font-size: 2rem;
+      }
+    }
+
+
+.signature {
+  width: 100%;
+  font-family: var(--logoFont);
+  font-size: 2rem;
+  text-align: right;
+}
+
+/*  MENU STYLES  -----------------------------------*/
+.menu {
+  padding: 10% 5% 0 5%;
+}
+  .menu h1, .menu p {
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 50px;
+  }
+
+  .menu-item {
+    width: 30%;
+    min-width: 200px;
+    height: auto;
+    padding-bottom: 75px;
+    text-align: center;
+  }
+    .menu-item img {
+      width: 100%;
+      height: auto;
+      transition: 0.3s;
+    }
+      .menu-item img:hover {
+        opacity: 0.7;
+      }
+
+    .menu-item h2 {
+      font-size: 2rem;
+      margin: 0;
+      padding: 10px;
+    }
+
+    @media only screen and (max-width: 700px) {
+      .menu-item {
+        width: 100%;
+      }
+    }
+
+/*  HERO2 STYLES  -----------------------------------*/
+.hero3 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: #4d3319; /* Used if the image is unavailable */
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../media/hero3.jpg");
+  background-attachment: scroll;
+  padding: 0 5% 0 5%;
+  color: white;
+}
+
+
+/*  REVIEW STYLES  -----------------------------------*/
+
+  .reviews {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10% 5%;
+    align-items: flex-start;
+  }
+    .reviews-col {
+      width: 49%;
+      min-width: 300px;
+      align-items: center;
+    }
+      @media only screen and (max-width: 700px) {
+      .reviews-col {
+        width: 100%;
+        min-width: 0;
+      }
+    }
+
+  .reviews h2 {
+    padding-right: 10px;
+  }
+
+  .review {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: content-box;
+    background-color: white;
+    padding: 20px;
+    margin: 30px;;
+    border-radius: 30px 0 30px 0;
+    box-shadow: 5px 5px 10px darkgrey;
+    cursor: context-menu;
+    transition: 0.3s;
+  }
+
+  @media only screen and (max-width: 700px) {
+    .review {
+      margin: 20px 0;
+    }
+  }
+    .review:hover {
+      box-shadow: 5px 5px 10px grey;
+    }
+
+  .review-text {
+    font-size: 1.6rem;
+    font-style: italic;
+    width: 100%;
+  }
+
+  .review-name {
+    display: flex;
+    align-content: center;
+    width: 100%;
+    height: 30%;
+    color: var(--accentColor);
+  }
+    .review-name img {
+      border-radius: 50%;
+      width: 15%;
+      height: 15%;
+      align-self: center;
+      padding-right: 5px;
+    }
+
+/*  MAP STYLES  -----------------------------------*/
+#googleMap {
+  display: block;
+  width: 100%;
+  height: 400px;
+}
+
+/*  FOOTER STYLES  -----------------------------------*/
+footer {
+  background-color: var(--accentColor);
+  color: white;
+  padding: 5% 5% 1% 5%;
+  font-size: 1.5rem;
+}
+
+.address {
+  display: inline-block;
+  width: auto;
+}
+
+.opening-times {
+  display: inline-block;
+  width: auto;
+  float: right;
+  text-align: right;
+}
+
+.contact-info {
+  display: block;
+  padding: 30px 0;
+  font-weight: bold;
+}
+  .contact-info a {
+    color: white;
+    text-decoration: none;
+  }
+
+.email {
+  display: inline;
+}
+
+.phone {
+  display: inline;
+  float: right;
+}
+
+.copyright {
+  text-align: center;
+  font-size: 1.1rem;
+}
+  .copyright span {
+    font-family: var(--logoFont);
+    font-size: 1.3rem;
+  }
+
+.socials {
+  text-align: center;
+  font-size: 2rem;
+}
+  .socials i {
+    padding: 0 5px;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+    .socials i:hover {
+      font-size: 2.2rem;
+    }
+
+@media only screen and (max-width: 700px) {
+  footer, footer p {
+    font-size: 1.rem;
+  }
+
+  .address, .opening-times, .phone, .email {
+    display: block;
+    float: none;
+    text-align: left;
+  }
+
+  .contact-info {
+    padding: 0;
+  }
+
+
+
+}

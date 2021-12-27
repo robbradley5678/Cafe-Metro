@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Contact | Café Metro</title>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Playfair+Display&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/835d608521.js" crossorigin="anonymous"></script>
+
+  <!-- CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stlesheet">
+  <link href="./css/style.css" rel="stylesheet">
+  <link href="./css/contact.css" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+  <link rel="manifest" href="./favicon/site.webmanifest">
+</head>
+
+<body>
+  <header>
+    <div class="header-top">
+      <a href="./index.html" class="logo">Café Metro</a>
+      <nav>
+        <ul>
+          <li><a href="./index.html#about">About</a></li>
+          <li><a href="./menu.html">Menu</a></li>
+          <li><a href="./index.html#googleMap">Find Us</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Mobile Nav -->
+      <i class="fas fa-bars" id="hamburger"></i>
+      <nav id="mobile-nav">
+        <ul>
+          <li><a href="./index.html#about">About</a></li>
+          <li><a href="./menu.html">Menu</a></li>
+          <li><a href="./index.html#googleMap">Find Us</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <script type="text/javascript" src="./js/mobileNav.js"></script>
+    </div>
+
+    <div class="hero-text">
+      <span class="section-title">&boxh;&boxh; Contact us</span>
+      <h1 class="hero-h1">Say Hello to Metro</h1>
+    </div>
+  </header>
+
+  <main>
+    <div class="contact-text">
+      <p>Oh Hi there! If you have any enquiries or booking requests, please fill out the form below, and we'll get back to you as soon as we can.</p>
+
+      <p>Or you can pop us an email or give us a call, our details are at the bottom.</p>
+    </div>
+
+    <section class="form-container">
+      <form action="/action_page.php">
+        <label for="fname">Your name:</label>
+        <input type="text" id="name" name="name">
+
+        <label for="number">Your number:</label>
+        <input type="text" id="number" name="number">
+
+        <label for="email">Your email:</label>
+        <input type="text" id="email" name="number">
+
+        <label for="subject">Your message:</label>
+        <textarea id="message" name="message"></textarea>
+
+        <div class="button-container">
+          <button type="submit">Send</button>
+        </div>
+      </form>
+    </section>
+
+    <section id="googleMap"></section>
+    <script src="./js/googleMap.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0hw7FCnDBiHgkdjo6YzcDyH2wBHd-SWs&callback=myMap"></script>
+  </main>
+
+  <footer>
+    <script type="text/javascript" src="./js/footer.js"></script>
+  </footer>
+
+</body>
+</html>

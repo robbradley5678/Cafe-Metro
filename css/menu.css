@@ -1,0 +1,39 @@
+header {
+    background-image: url("../media/hero5.jpg");
+    background-position: bottom;
+    height: 75vh;
+}
+
+.hero-text {
+  position: absolute;
+  top: 30%;
+}
+
+section {
+  padding: 5%;
+  padding-bottom: 5rem;
+}
+
+main h1 {
+  text-align: center;
+}
+
+.body-color-section {
+
+}
+
+.accent-color-section {
+  background-color: var(--accentColor);
+  color: white;
+}
+
+table {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  font-size: 1.5rem;
+}
+
+tr td:nth-child(2) {
+   text-align: right;
+}

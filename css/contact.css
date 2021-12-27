@@ -1,0 +1,67 @@
+header {
+    background-image: url("../media/hero5.jpg");
+    height: 75vh;
+}
+
+.hero-text {
+  position: absolute;
+  top: 30%;
+}
+
+.contact-text {
+  display: inlne-block;
+  margin: 0 auto;
+  max-width: 700px;
+  text-align: left;
+  padding: 5% 5% 0 5%;
+}
+
+form {
+  font-size: 1.5rem;
+}
+
+.form-container {
+  display: inlne-block;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: left;
+  padding: 5%;
+}
+
+label, input, textarea {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 100%;
+  font-family: var(--bodyFont);
+  font-size: 1.5rem;
+}
+
+label {
+  margin: 10px 0;
+}
+
+input, textarea {
+  border: 1px solid var(--accentColor);
+  padding: 10px;
+  margin-bottom: 20px;
+  opacity: 0.7;
+}
+
+textarea {
+  min-height: 150px;
+}
+
+button {
+  color: var(--accentColor);
+  border: 1px solid var(--accentColor);
+}
+  button:hover {
+    background-color: var(--accentColor);
+    color: var(--bodyBgColor);
+  }
+
+  input:focus, textarea:focus {
+    outline: none;
+    opacity: 1;
+    transition: 0.3s;
+  }
